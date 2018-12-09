@@ -84,11 +84,10 @@ document.addEventListener('DOMContentLoaded', function(){
       console.log(twitter)
       updates['/artists/' + postKey] = postData;
       firebase.database().ref().update(updates)
+
+      var inputs = document.querySelectorAll('input');
+      inputs.forEach(input => input.value === '')
     });
-
-
-    var inputs = document.querySelectorAll('input');
-    inputs.forEach(input => input.value === '')
   }
 
 
