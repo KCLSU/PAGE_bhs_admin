@@ -128,7 +128,7 @@
 
 <!-- CONTENT -->
 
-<section class="grid-container">
+<div class="grid-container">
   <div class="banner flex-center-center">
     <h1> Bush House Sessions Admin</h1>
   </div>
@@ -173,7 +173,7 @@
     <div class="button-container">
       <a class="dc-button"> Refresh Fine Artists</a>
     </div>
-    <ul id="artisits-list"></ul>
+    <ul id="artists-list"></ul>
   </div>
 
   <div id="poets" class="flex-center-center flex-vertical">
@@ -186,12 +186,11 @@
 
   <div id="add-student" class="flex-center-center flex-vertical">
     <h3> Add a student from the database</h3>
-
     <div id="filesubmit">
       <input type="file" id="file-select" />
-    <div class="button-container">
-      <a class="dc-button" id="upload-button">Submit </a>
-    </div>
+      <div class="button-container">
+        <a class="dc-button" id="upload-button">Submit </a>
+      </div>
     </div>
 
       <form class="add-form">
@@ -203,11 +202,12 @@
         <input val="" id="student-description" placeholder= "Website...">
       </form>
       <div class="button-container">
-        <a class="dc-button">  Add new BHS artist</button>
+        <a class="dc-button">  Add new BHS artist</a>
       </div>
       <ul id="added"></ul>
+
   </div>
-</section>
+</div>
 
 
     <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>

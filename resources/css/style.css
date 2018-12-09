@@ -1,8 +1,3 @@
-section {
-  width: 100%;
-  position: relative;
-  height: 100vh;
-}
 
 .flex-vertical {
   flex-direction: column;
@@ -57,7 +52,7 @@ section {
 }
 
 #artists{
-    grid-area: delete;
+    grid-area: artists;
     background-color: yellow;
 }
 
@@ -65,7 +60,7 @@ section {
     grid-area: poets;
 }
 
-#add-student {
+#add-student{
     grid-area: add;
     background-color: pink;
 }
