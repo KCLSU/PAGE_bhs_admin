@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function(){
       updates['/artists/' + postKey] = postData;
       firebase.database().ref().update(updates)
 
-      var inputs = document.querySelectorAll('input');
-      inputs.forEach(input => input.value === '')
+      const allInputs = document.querySelectorAll('.add-form input');
+      allInputs.forEach(input => input.value = '')
     });
   }
 
