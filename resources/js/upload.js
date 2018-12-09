@@ -37,6 +37,11 @@ document.addEventListener('DOMContentLoaded', function(){
     var uploadTask = storageRef.put(selectedFile);
     var imageURL;
 
+    //FETCH INPUTS
+    let name = document.getElementById('name').value;
+    let description = document.getElementById('description').value;
+    let twitter = document.getElementById('twitter').value;
+
       // Register three observers:
     // 1. 'state_changed' observer, called any time the state changes
     // 2. Error observer, called on failure
@@ -63,17 +68,27 @@ document.addEventListener('DOMContentLoaded', function(){
         console.log('File available at', downloadURL);
       });
 
+      //ADD METADATA TO REAL TIME DATABASE
       imageURL = uploadTask.snapshot.downloadURL;
-      var postKey = firebase.database().ref('second/').push().key;
+      var postKey = firebase.database().ref('artists/').push().key;
       var updates = {};
       var postData = {
         url: imageURL,
+        name: name,
+        description: description,
+        twitter: twitter
       }
       console.log(imageURL)
-      updates['/second/' + postKey] = postData;
+      console.log(name)
+      console.log(description)
+      console.log(twiter)
+      updates['/artists/' + postKey] = postData;
       firebase.database().ref().update(updates)
     });
 
+
+    var inputs = document.querySelectorAll('input');
+    inputs.forEach(input => input.value === '')
   }
 
 
