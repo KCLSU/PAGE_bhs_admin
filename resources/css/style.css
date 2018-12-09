@@ -1,4 +1,7 @@
 
+h1, h3 {
+  text-align: center;
+}
 .flex-vertical {
   flex-direction: column;
 }
@@ -8,6 +11,10 @@
   top: 0;
   width: 100%;
     z-index:1000;
+}
+
+a.dc-button {
+  font-size: 14px;
 }
 
 
