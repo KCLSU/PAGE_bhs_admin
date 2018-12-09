@@ -1,4 +1,4 @@
-//MAKE EACH SECTION THE SIZE OF THE VIEWPORT MINUS THE NAVBAR
+cd //MAKE EACH SECTION THE SIZE OF THE VIEWPORT MINUS THE NAVBAR
 function setSectionHeight(){
   const navbar = document.querySelectorAll('.navbar-inverse')[0];
   let navbarHeight = navbar.offsetHeight;
