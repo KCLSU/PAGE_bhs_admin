@@ -5,7 +5,8 @@ ref.orderByChild("name").equalTo("Achilles").on("child_added", function(snapshot
   console.log("List all the Achilles")
   console.log(snapshot.key);
   console.log(snapshot);
-  // snapshot.forEach(function(data) {
-  //   console.log(`${data.name} has a twitter handle of ${data.twitter}. He has been described as: ${data.description}`)
-  // })
+  snapshot.forEach(function(data) {
+    console.log(data)
+    // console.log(`${data.name} has a twitter handle of ${data.twitter}. He has been described as: ${data.description}`)
+  })
 });
