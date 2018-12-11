@@ -10,9 +10,9 @@ ref.orderByChild("name").equalTo("Achilles").on("child_added", function(snapshot
   console.log("List all the Achilles")
   console.log(snapshot.key);
   artistNames.push(snapshot.val().name);
-  let li = `<li>${snapshot.val().name}</li>`
-  // let li = document.createElement('li');
-  // li.innerHTML = liS;
+  let name = `${snapshot.val().name}`
+   let li = document.createElement('li');
+   li.innerHTML = name;
   upcoming.appendChild(li);
 
 });
