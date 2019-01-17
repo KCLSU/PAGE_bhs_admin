@@ -191,6 +191,14 @@
     </div>
 
       <form class="add-form">
+        <select id="artist-type">
+          <option value="upcoming">upcoming</option>
+          <option value="filmmakers">filmmakers</option>
+          <option value="musicians">musicians</option>
+          <option value="photographers">photographers</option>
+          <option value="fine artists">fine artists</option>
+          <option value="spoken word">spoken word</option>
+        </select>
         <input val="" id="name" placeholder= "Name..">
         <input val="" id="description" placeholder= "Description...">
         <input val="" id="facebook" placeholder= "Facebook...">
@@ -201,8 +209,8 @@
       <div class="button-container">
         <a class="dc-button" id="upload-button">  Add new BHS artist</a>
       </div>
-      <p class="list" id="progress"></p>
-      <p class="list" id="progress-state"></p>
+      <p id="progress"></p>
+      <p id="progress-state"></p>
 
   </div>
 </section>

@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var imageURL;
 
     //FETCH INPUTS
+    let type = document.getElementById('artist-type').value;
     let name = document.getElementById('name').value;
     let description = document.getElementById('description').value;
     let facebook = document.getElementById('facebook').value;
@@ -82,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function(){
       var postKey = firebase.database().ref('artists/').push().key;
       var updates = {};
       var postData = {
+        type: type,
         url: imageURL,
         name: name,
         description: description,
