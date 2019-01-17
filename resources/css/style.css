@@ -109,3 +109,10 @@ input {
   margin: 1em;
   height: 2em;
 }
+
+.popup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 2em;
+}

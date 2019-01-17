@@ -22,7 +22,7 @@ function loadArtists(){
     let type = snapshot.val().type;
     let li = document.createElement('li');
     li.innerHTML = name;
-    // li.addEventListener('click', editArtists(snapshot.val(), snapshot.key))
+    li.addEventListener('click', editArtists(snapshot.val(), snapshot.key))
 
     switch(type){
       case "upcoming" :
@@ -51,39 +51,44 @@ function loadArtists(){
 
   console.log(artistNames);
 
-  // function editArtist(data, key){
-  //
-  //   let popUp = `
-  //     <div class="popup">
-  //       <i class="fas fa-times" onclick="hidePopUp()"></i>
-  //       <div data-key=${key} class="artist-info">
-  //         <input val=${data.name} id="name" placeholder= "Name..">
-  //         <input val=${data.description} id="edit-description" >
-  //         <input val=${data.facebook} id="edit-facebook" >
-  //         <input val=${data.twitter} id="edit-twitter" >
-  //         <input val=${data.instagram} id="edit-instagram" >
-  //         <input val=${data.website} id="edit-website" >
-  //       </div>
-  //       <div class="button">
-  //         <a class="update-button" onclick="updateArtist(${data})"> Update</a>
-  //         <a class="delete-button" onclick="deleteArtist(${key})"> Delete </a>
-  //       </div>
-  //     </div>
-  //     `
-  //
-  //     function deleteArtist(key){
-  //
-  //     }
-  //
-  //     function updateArtist(data){
-  //
-  //     }
-  //
-  //     function hidePopUp(){
-  //
-  //     }
-  //
-  // }
+  function editArtist(data, key){
+
+    let popUp = `
+      <div class="popup">
+        <i class="fas fa-times" onclick="hidePopUp()"></i>
+        <div data-key=${key} class="artist-info">
+          <input val=${data.name} id="name" placeholder= "Name..">
+          <input val=${data.description} id="edit-description" >
+          <input val=${data.facebook} id="edit-facebook" >
+          <input val=${data.twitter} id="edit-twitter" >
+          <input val=${data.instagram} id="edit-instagram" >
+          <input val=${data.website} id="edit-website" >
+        </div>
+        <div class="button">
+          <a class="update-button"> Update</a>
+          <a class="delete-button"> Delete </a>
+        </div>
+      </div>
+      `
+      //
+      // <a class="update-button" onclick="updateArtist(${data})"> Update</a>
+      // <a class="delete-button" onclick="deleteArtist(${key})"> Delete </a>
+
+
+
+      // function deleteArtist(key){
+      //
+      // }
+      //
+      // function updateArtist(data){
+      //
+      // }
+      //
+      // function hidePopUp(){
+      //
+      // }
+
+  }
 }
 
 loadArtists();
