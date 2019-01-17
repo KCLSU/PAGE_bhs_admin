@@ -116,3 +116,9 @@ input {
   top: 50%;
   padding: 2em;
 }
+
+.popup-container {
+  position: relative;
+  width: 30em;
+  height: auto;
+}

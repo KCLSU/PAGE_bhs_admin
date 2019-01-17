@@ -46,6 +46,8 @@ function loadArtists(){
       default: console.log("Artist does not fall into category")
 
     }
+
+
     function editArtist(data, key){
 
       let popUp = `
@@ -82,13 +84,14 @@ function loadArtists(){
         // function hidePopUp(){
         //
         // }
-
+          let div = document.createElement('div');
+          div.classList.add("popup-container").
+          div.appendChild(popup)
     }
-    }
-
   });
 
   console.log(artistNames);
 
+}
 
 loadArtists();
