@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function(){
     let twitter = document.getElementById('twitter').value;
     let instagram = document.getElementById('instagram').value;
     let website = document.getElementById('website').value;
-    let progress = document.getElementById('progress').value;
-    let progressState = document.getElementById('progress-state').value;
+    let progress = document.getElementById('progress');
+    let progressState = document.getElementById('progress-state');
 
       // Register three observers:
     // 1. 'state_changed' observer, called any time the state changes
