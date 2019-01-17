@@ -85,7 +85,7 @@ function loadArtists(){
         //
         // }
           let div = document.createElement('div');
-          div.classList.add("popup-container").
+          div.classList.add("popup-container")
           div.appendChild(popUp)
     }
   });
