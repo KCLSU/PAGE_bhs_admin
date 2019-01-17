@@ -10,6 +10,7 @@ const musicians = document.getElementById('musicians-list');
 const photographers = document.getElementById('photographers-list');
 const artists = document.getElementById('artists-list');
 const poets = document.getElementById('poets-list');
+const grid = document.getElementById('grid-area');
 
 
 function loadArtists(){
@@ -87,6 +88,7 @@ function loadArtists(){
           let div = document.createElement('div');
           div.classList.add("popup-container")
           div.innerHTML = popUp;
+          grid.appendChild(div);
 
     }
   });
