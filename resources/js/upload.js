@@ -40,7 +40,12 @@ document.addEventListener('DOMContentLoaded', function(){
     //FETCH INPUTS
     let name = document.getElementById('name').value;
     let description = document.getElementById('description').value;
+    let facebook = document.getElementById('facebook').value;
     let twitter = document.getElementById('twitter').value;
+    let instagram = document.getElementById('instagram').value;
+    let website = document.getElementById('website').value;
+    let progress = document.getElementById('progress').value;
+    let progressState = document.getElementById('progress-state').value;
 
       // Register three observers:
     // 1. 'state_changed' observer, called any time the state changes
@@ -51,17 +56,21 @@ document.addEventListener('DOMContentLoaded', function(){
       // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
       var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
       console.log('Upload is ' + progress + '% done');
+      progress.innerHTML = `Upload is ${progress}% done`
       switch (snapshot.state) {
         case firebase.storage.TaskState.PAUSED: // or 'paused'
           console.log('Upload is paused');
+          progressState.innerHTML = 'Upload is paused'
           break;
         case firebase.storage.TaskState.RUNNING: // or 'running'
           console.log('Upload is running');
+            progressState.innerHTML = 'Upload is running'
           break;
       }
     }, function(error) {
       // Handle unsuccessful uploads
         console.log("Upload unsuccessful")
+        progressState.innerHTML = 'Upload unsuccessful'
     }, function() {
       // Handle successful uploads on complete
       uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
@@ -76,7 +85,10 @@ document.addEventListener('DOMContentLoaded', function(){
         url: imageURL,
         name: name,
         description: description,
-        twitter: twitter
+        twitter: twitter,
+        facebook: facebook,
+        instagram: instagram,
+        website: website
       }
       console.log(imageURL)
       console.log(name)
