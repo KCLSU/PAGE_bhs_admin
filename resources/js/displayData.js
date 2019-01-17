@@ -22,7 +22,7 @@ function loadArtists(){
     let type = snapshot.val().type;
     let li = document.createElement('li');
     li.innerHTML = name;
-    li.addEventListener('click', editArtists(snapshot.val(), snapshot.key))
+    li.addEventListener('click', editArtist(snapshot.val(), snapshot.key))
 
     switch(type){
       case "upcoming" :
