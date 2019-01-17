@@ -42,7 +42,7 @@ function loadArtists(){
       case "poets" :
         poets.appendChild(li);
       break;
-
+      
     }
 
   });
