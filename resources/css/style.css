@@ -110,15 +110,13 @@ input {
   height: 2em;
 }
 
-.popup {
-  position: absolute;
-  left: 50%;
-  top: 50%;
+.popup-container{
+  grid-column: 1 / span 7;
+  grid-row: 1 / span 4;
+  z-index: 100;
   padding: 2em;
 }
 
-.popup-container {
-  position: relative;
-  width: 30em;
-  height: auto;
+.popup {
+padding: 1em;
 }
