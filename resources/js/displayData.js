@@ -27,32 +27,7 @@ function loadArtists(){
     let type = snapshot.val().type;
     let li = document.createElement('li');
     li.innerHTML = name;
-    li.addEventListener('click', editArtist)
-
-    switch(type){
-      case "upcoming" :
-        upcoming.appendChild(li);
-      break;
-      case "filmmakers" :
-        filmmakers.appendChild(li);
-      break;
-      case "musicians" :
-        musicians.appendChild(li);
-      break;
-      case "photographers" :
-        photographers.appendChild(li);
-      break;
-      case "artists" :
-        artists.appendChild(li);
-      break;
-      case "poets" :
-        poets.appendChild(li);
-      break;
-      default: console.log("Artist does not fall into category")
-
-    }
-
-    function editArtist(){
+    li.addEventListener('click', function editArtist(){
       console.log("supplied data: ")
       console.log(data)
       let popUp = `
@@ -95,6 +70,31 @@ function loadArtists(){
           grid.appendChild(div);
 
     }
+)
+
+    switch(type){
+      case "upcoming" :
+        upcoming.appendChild(li);
+      break;
+      case "filmmakers" :
+        filmmakers.appendChild(li);
+      break;
+      case "musicians" :
+        musicians.appendChild(li);
+      break;
+      case "photographers" :
+        photographers.appendChild(li);
+      break;
+      case "artists" :
+        artists.appendChild(li);
+      break;
+      case "poets" :
+        poets.appendChild(li);
+      break;
+      default: console.log("Artist does not fall into category")
+
+    }
+
 
   });
 
