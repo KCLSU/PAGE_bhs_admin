@@ -92,15 +92,17 @@ function loadArtists(){
         //
         // }
         //
+        function hidePopUp(){
+        let box = document.querySelectorAll('popup-container')[0];
+        box.style.display = 'none'
+        }
+        
           let div = document.createElement('div');
           div.classList.add("popup-container")
           div.innerHTML = popUp;
           grid.appendChild(div);
 
-          function hidePopUp(){
-          let box = document.querySelectorAll('popup-container')[0];
-          box.style.display = 'none'
-          }
+
     }
 )
 
