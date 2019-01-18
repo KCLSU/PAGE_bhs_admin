@@ -93,10 +93,10 @@ function loadArtists(){
         // }
         //
         function hidePopUp(){
-        let box = document.querySelectorAll('popup-container')[0];
+        let box = document.querySelectorAll('.popup-container')[0];
         box.style.display = 'none'
         }
-        
+
           let div = document.createElement('div');
           div.classList.add("popup-container")
           div.innerHTML = popUp;
