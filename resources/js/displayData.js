@@ -19,6 +19,8 @@ function loadArtists(){
     console.log("List all the Achilles")
     console.log("snapshot key: " + snapshot.key);
     artistNames.push(snapshot.val().name);
+    console.log("data snapshot");
+    console.log(data)
     let data = snapshot.val();
     let key = snapshot.key;
     let name = snapshot.val().name;
@@ -50,7 +52,7 @@ function loadArtists(){
 
     }
 
-    function editArtist(data, key){
+    function editArtist(e, data, key){
       console.log("supplied data: ")
       console.log(data)
       let popUp = `
