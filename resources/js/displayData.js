@@ -52,7 +52,7 @@ function loadArtists(){
 
     }
 
-    function editArtist(e, data, key){
+    function editArtist(){
       console.log("supplied data: ")
       console.log(data)
       let popUp = `
