@@ -19,11 +19,12 @@ function loadArtists(){
     console.log("List all the Achilles")
     console.log("snapshot key: " + snapshot.key);
     artistNames.push(snapshot.val().name);
+    let data = snapshot.val();
     let name = snapshot.val().name;
     let type = snapshot.val().type;
     let li = document.createElement('li');
     li.innerHTML = name;
-    li.addEventListener('click', editArtist(snapshot.val(), snapshot.key))
+    li.addEventListener('click', editArtist(data, snapshot.key))
 
     switch(type){
       case "upcoming" :
