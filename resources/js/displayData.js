@@ -57,6 +57,14 @@ function loadArtists(){
         <div class="popup">
           <i class="fas fa-times" onclick="hidePopUp()"></i>
           <div data-key=${key} class="artist-info">
+          <select id="edit-artist-type">
+            <option value="upcoming">upcoming</option>
+            <option value="filmmakers">filmmakers</option>
+            <option value="musicians">musicians</option>
+            <option value="photographers">photographers</option>
+            <option value="artists">fine artists</option>
+            <option value="poets">spoken word</option>
+          </select>
             <input value=${data.name} id="name" placeholder= "Name..">
             <input value=${data.description} id="edit-description" >
             <input value=${data.facebook} id="edit-facebook" >
@@ -84,14 +92,15 @@ function loadArtists(){
         //
         // }
         //
-        // function hidePopUp(){
-        //
-        // }
           let div = document.createElement('div');
           div.classList.add("popup-container")
           div.innerHTML = popUp;
           grid.appendChild(div);
 
+          function hidePopUp(){
+          let box = document.querySelectorAll('popup-container')[0];
+          box.style.display = 'none'
+          }
     }
 )
 

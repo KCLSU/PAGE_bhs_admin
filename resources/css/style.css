@@ -111,10 +111,13 @@ input {
 }
 
 .popup-container{
-  grid-column: 1 / span 7;
+  grid-column: 7 / span 1;
   grid-row: 1 / span 4;
   z-index: 100;
   padding: 2em;
+  display: flex;
+  align-items: center;
+  background-color: red;
 }
 
 .popup {
