@@ -20,11 +20,12 @@ function loadArtists(){
     console.log("snapshot key: " + snapshot.key);
     artistNames.push(snapshot.val().name);
     let data = snapshot.val();
+    let key = snapshot.key;
     let name = snapshot.val().name;
     let type = snapshot.val().type;
     let li = document.createElement('li');
     li.innerHTML = name;
-    li.addEventListener('click', editArtist(data, snapshot.key))
+    li.addEventListener('click', editArtist)
 
     switch(type){
       case "upcoming" :
@@ -49,50 +50,53 @@ function loadArtists(){
 
     }
 
+    function editArtist(data, key){
+      console.log("supplied data: ")
+      console.log(data)
+      let popUp = `
+        <div class="popup">
+          <i class="fas fa-times" onclick="hidePopUp()"></i>
+          <div data-key=${key} class="artist-info">
+            <input val=${data.name} id="name" placeholder= "Name..">
+            <input val=${data.description} id="edit-description" >
+            <input val=${data.facebook} id="edit-facebook" >
+            <input val=${data.twitter} id="edit-twitter" >
+            <input val=${data.instagram} id="edit-instagram" >
+            <input val=${data.website} id="edit-website" >
+          </div>
+          <div class="button">
+            <a class="update-button"> Update</a>
+            <a class="delete-button"> Delete </a>
+          </div>
+        </div>
+        `
+        //
+        // <a class="update-button" onclick="updateArtist(${data})"> Update</a>
+        // <a class="delete-button" onclick="deleteArtist(${key})"> Delete </a>
+
+
+
+        // function deleteArtist(key){
+        //
+        // }
+        //
+        // function updateArtist(data){
+        //
+        // }
+        //
+        // function hidePopUp(){
+        //
+        // }
+          let div = document.createElement('div');
+          div.classList.add("popup-container")
+          div.innerHTML = popUp;
+          grid.appendChild(div);
+
+    }
+
   });
 
-  function editArtist(data, key){
 
-    let popUp = `
-      <div class="popup">
-        <i class="fas fa-times" onclick="hidePopUp()"></i>
-        <div data-key=${key} class="artist-info">
-          <input val=${data.name} id="name" placeholder= "Name..">
-          <input val=${data.description} id="edit-description" >
-          <input val=${data.facebook} id="edit-facebook" >
-          <input val=${data.twitter} id="edit-twitter" >
-          <input val=${data.instagram} id="edit-instagram" >
-          <input val=${data.website} id="edit-website" >
-        </div>
-        <div class="button">
-          <a class="update-button"> Update</a>
-          <a class="delete-button"> Delete </a>
-        </div>
-      </div>
-      `
-      //
-      // <a class="update-button" onclick="updateArtist(${data})"> Update</a>
-      // <a class="delete-button" onclick="deleteArtist(${key})"> Delete </a>
-
-
-
-      // function deleteArtist(key){
-      //
-      // }
-      //
-      // function updateArtist(data){
-      //
-      // }
-      //
-      // function hidePopUp(){
-      //
-      // }
-        let div = document.createElement('div');
-        div.classList.add("popup-container")
-        div.innerHTML = popUp;
-        grid.appendChild(div);
-
-  }
 
   console.log(artistNames);
 
