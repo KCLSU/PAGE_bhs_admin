@@ -20,8 +20,8 @@ function loadArtists(){
     console.log("snapshot key: " + snapshot.key);
     artistNames.push(snapshot.val().name);
     console.log("data snapshot");
-    console.log(data)
     let data = snapshot.val();
+    console.log(data)
     let key = snapshot.key;
     let name = snapshot.val().name;
     let type = snapshot.val().type;
