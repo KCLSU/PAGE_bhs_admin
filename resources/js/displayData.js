@@ -92,9 +92,12 @@ function loadArtists(){
         //
         // }
         //
-        function hidePopUp(){
-        let box = document.querySelectorAll('.popup-container')[0];
-        box.style.display = 'none'
+
+        let boxes = document.querySelectorAll('.popup-container');
+        if (boxes){
+          boxes.forEach(box => {
+          box.style.display = 'none'
+        })
         }
 
           let div = document.createElement('div');
@@ -113,6 +116,11 @@ function loadArtists(){
 
   console.log(artistNames);
 
+}
+
+function hidePopUp(){
+let box = document.querySelectorAll('.popup-container')[0];
+box.style.display = 'none'
 }
 
 loadArtists();
