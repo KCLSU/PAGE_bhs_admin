@@ -27,6 +27,29 @@ function loadArtists(){
     let type = snapshot.val().type;
     let li = document.createElement('li');
     li.innerHTML = name;
+    switch(type){
+      case "upcoming" :
+        upcoming.appendChild(li);
+      break;
+      case "filmmakers" :
+        filmmakers.appendChild(li);
+      break;
+      case "musicians" :
+        musicians.appendChild(li);
+      break;
+      case "photographers" :
+        photographers.appendChild(li);
+      break;
+      case "artists" :
+        artists.appendChild(li);
+      break;
+      case "poets" :
+        poets.appendChild(li);
+      break;
+      default: console.log("Artist does not fall into category")
+
+    }
+
     li.addEventListener('click', function editArtist(){
       console.log("supplied data: ")
       console.log(data)
@@ -34,12 +57,12 @@ function loadArtists(){
         <div class="popup">
           <i class="fas fa-times" onclick="hidePopUp()"></i>
           <div data-key=${key} class="artist-info">
-            <input val=${data.name} id="name" placeholder= "Name..">
-            <input val=${data.description} id="edit-description" >
-            <input val=${data.facebook} id="edit-facebook" >
-            <input val=${data.twitter} id="edit-twitter" >
-            <input val=${data.instagram} id="edit-instagram" >
-            <input val=${data.website} id="edit-website" >
+            <input value=${data.name} id="name" placeholder= "Name..">
+            <input value=${data.description} id="edit-description" >
+            <input value=${data.facebook} id="edit-facebook" >
+            <input value=${data.twitter} id="edit-twitter" >
+            <input value=${data.instagram} id="edit-instagram" >
+            <input value=${data.website} id="edit-website" >
           </div>
           <div class="button">
             <a class="update-button"> Update</a>
@@ -71,29 +94,6 @@ function loadArtists(){
 
     }
 )
-
-    switch(type){
-      case "upcoming" :
-        upcoming.appendChild(li);
-      break;
-      case "filmmakers" :
-        filmmakers.appendChild(li);
-      break;
-      case "musicians" :
-        musicians.appendChild(li);
-      break;
-      case "photographers" :
-        photographers.appendChild(li);
-      break;
-      case "artists" :
-        artists.appendChild(li);
-      break;
-      case "poets" :
-        poets.appendChild(li);
-      break;
-      default: console.log("Artist does not fall into category")
-
-    }
 
 
   });
