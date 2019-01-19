@@ -219,7 +219,7 @@
     <i class="fas fa-times" onclick="hidePopUp()"></i>
     <div data-key=null class="artist-info">
     <select id="edit-artist-type">
-      <option id="type" value=''></option>
+      <option id="edit-type"></option>
       <option value="upcoming">upcoming</option>
       <option value="filmmakers">filmmakers</option>
       <option value="musicians">musicians</option>
@@ -235,8 +235,8 @@
       <input  id="edit-website" >
     </div>
     <div class="button">
-      <a class="update-button" onclick="updateArtist(${data})"> Update</a>
-      <a class="delete-button" onclick="deleteArtist(${key})"> Delete </a>
+      <a class="update-button" onclick="updateArtist()"> Update</a>
+      <a class="delete-button" onclick="deleteArtist()"> Delete </a>
     </div>
   </div>
 

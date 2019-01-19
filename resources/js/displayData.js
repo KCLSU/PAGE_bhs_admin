@@ -64,7 +64,7 @@ function loadArtists(){
 
     li.addEventListener('click', function editArtist(){
       image = data.image;
-      category = data.type;
+      category = type;
       name = data.name;
       description = data.description
       facebook = data.facebook;
