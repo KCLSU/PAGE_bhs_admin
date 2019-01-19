@@ -120,7 +120,9 @@ function updateArtist(){
   let data = {
     category, key, image, name, description, facebook, instagram, website, twitter
   }
-
+console.log("data to update:")
+console.log(data)
+console.log("now executing update data")
     writeArtistData(data)
     hidePopUp()
 
