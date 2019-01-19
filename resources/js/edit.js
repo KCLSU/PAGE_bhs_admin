@@ -1,7 +1,10 @@
 import { config } from './config.js';
 
 export function writeArtistData(data) {
-  firebase.database().ref('artists/' + data.key).set({
+  // var postKey = firebase.database().ref('artists/').child(data.key).push().key;
+  var updates = {};
+
+  updateData = {
     type: data.category,
     url: data.image,
     name: data.name,
@@ -10,5 +13,7 @@ export function writeArtistData(data) {
     facebook: data.facebook,
     instagram: data.instagram,
     website: data.website
-  });
+  };
+  updates['/artists/' + data.key] = updateData;
+  firebase.database().ref().update(updates);
 }
