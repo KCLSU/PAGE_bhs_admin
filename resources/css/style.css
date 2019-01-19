@@ -137,3 +137,7 @@ input {
   margin: 2em 0;
   font-size: 1.5em;
 }
+
+#edit-description {
+  margin: 1em;
+}
