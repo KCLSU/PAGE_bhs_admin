@@ -4,7 +4,7 @@ export function writeArtistData(data) {
   // var postKey = firebase.database().ref('artists/').child(data.key).push().key;
   var updates = {};
 
-  updateData = {
+  var updateData = {
     type: data.category,
     url: data.image,
     name: data.name,
