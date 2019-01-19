@@ -118,10 +118,16 @@ input {
   display: flex;
   align-items: center;
   background-color: red;
+  transform: translateX(1000px);
+  transition: transform 2s;
 }
 
 .popup {
   padding: 1em;
   display: flex;
   flex-direction: column;
+}
+
+.active {
+  transform: translateX(0);
 }

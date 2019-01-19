@@ -11,7 +11,19 @@ const photographers = document.getElementById('photographers-list');
 const artists = document.getElementById('artists-list');
 const poets = document.getElementById('poets-list');
 const grid = document.getElementById('grid-area');
+const popup = document.querySelectorAll('.popup-container')[0];
 
+
+//EDIT ARTIST DETAILS
+let image;
+let category;
+let name;
+let description;
+let facebook;
+let twitter;
+let instagram;
+let website;
+let key;
 
 function loadArtists(){
 
@@ -22,8 +34,6 @@ function loadArtists(){
     console.log("data snapshot");
     let data = snapshot.val();
     console.log(data)
-    let key = snapshot.key;
-    let name = snapshot.val().name;
     let type = snapshot.val().type;
     let li = document.createElement('li');
     li.innerHTML = name;
@@ -51,76 +61,51 @@ function loadArtists(){
     }
 
     li.addEventListener('click', function editArtist(){
-      console.log("supplied data: ")
-      console.log(data)
-      let popUp = `
-        <div class="popup">
-          <i class="fas fa-times" onclick="hidePopUp()"></i>
-          <div data-key=${key} class="artist-info">
-          <select id="edit-artist-type">
-            <option value="upcoming">upcoming</option>
-            <option value="filmmakers">filmmakers</option>
-            <option value="musicians">musicians</option>
-            <option value="photographers">photographers</option>
-            <option value="artists">fine artists</option>
-            <option value="poets">spoken word</option>
-          </select>
-            <input value=${data.name} id="name" placeholder= "Name..">
-            <input value=${data.description} id="edit-description" >
-            <input value=${data.facebook} id="edit-facebook" >
-            <input value=${data.twitter} id="edit-twitter" >
-            <input value=${data.instagram} id="edit-instagram" >
-            <input value=${data.website} id="edit-website" >
-          </div>
-          <div class="button">
-            <a class="update-button"> Update</a>
-            <a class="delete-button"> Delete </a>
-          </div>
-        </div>
-        `
-        //
-        // <a class="update-button" onclick="updateArtist(${data})"> Update</a>
-        // <a class="delete-button" onclick="deleteArtist(${key})"> Delete </a>
+      image = data.image;
+      category = data.type;
+      name = data.name;
+      description = data.description
+      facebook = data.facebook;
+      twitter = data.twitter;
+      instagram = data.instagram;
+      website = data.website;
+      key = snapshot.key;
 
-
-
-        // function deleteArtist(key){
-        //
-        // }
-        //
-        // function updateArtist(data){
-        //
-        // }
-        //
-
-        let boxes = document.querySelectorAll('.popup-container');
-        if (boxes){
-          boxes.forEach(box => {
-          box.style.display = 'none'
-        })
-        }
-
-          let div = document.createElement('div');
-          div.classList.add("popup-container")
-          div.innerHTML = popUp;
-          grid.appendChild(div);
-
-
-    }
-)
-
+      }
+    });
 
   });
 
+}
 
+function editArtist(){
+  document.getElementById('edit-name').value = name;
+  document.getElementById('edit-description').value = description;
+  document.getElementById('edit-image').value = image;
+  document.getElementById('edit-facebook').value = facebook;
+  document.getElementById('edit-twitter').value = twitter;
+  document.getElementById('edit-instagram').value = instagram;
+  document.getElementById('edit-website').value = website;
+  document.getElementById('edit-type').value = category;
 
-  console.log(artistNames);
+  if (!popup.classList.contains('active')){
+    popup.classList.add('active');
+  }
 
 }
 
+function deleteArtist(){
+  console.log("delete artist")
+}
+
+function updateArtist(){
+    console.log("ypdates artist")
+}
+
 function hidePopUp(){
-let box = document.querySelectorAll('.popup-container')[0];
-box.style.display = 'none'
+  if (popup.classList.contains('active')){
+    popup.classList.remove('active');
+  }
 }
 
 loadArtists();

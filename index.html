@@ -213,6 +213,33 @@
       <p id="progress-state"></p>
 
   </div>
+
+  <div class="popup-container">
+  <div class="popup">
+    <i class="fas fa-times" onclick="hidePopUp()"></i>
+    <div data-key=null class="artist-info">
+    <select id="edit-artist-type">
+      <option id="type" value=''></option>
+      <option value="upcoming">upcoming</option>
+      <option value="filmmakers">filmmakers</option>
+      <option value="musicians">musicians</option>
+      <option value="photographers">photographers</option>
+      <option value="artists">fine artists</option>
+      <option value="poets">spoken word</option>
+    </select>
+      <input  id="edit-name">
+      <input  id="edit-description" >
+      <input  id="edit-facebook" >
+      <input  id="edit-twitter" >
+      <input  id="edit-instagram" >
+      <input  id="edit-website" >
+    </div>
+    <div class="button">
+      <a class="update-button" onclick="updateArtist(${data})"> Update</a>
+      <a class="delete-button" onclick="deleteArtist(${key})"> Delete </a>
+    </div>
+  </div>
+
 </section>
 
 
