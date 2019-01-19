@@ -35,9 +35,10 @@ function loadArtists(){
     console.log("data snapshot");
     let data = snapshot.val();
     console.log(data)
+    let artistName = snapshot.val().name;
     let type = snapshot.val().type;
     let li = document.createElement('li');
-    li.innerHTML = name;
+    li.innerHTML = artistName;
     switch(type){
       case "upcoming" :
         upcoming.appendChild(li);
@@ -71,14 +72,14 @@ function loadArtists(){
       instagram = data.instagram;
       website = data.website;
       key = snapshot.key;
-
+      updatePopup()
     });
 
   });
 
 }
 
-function editArtist(){
+function updatePopup(){
   document.getElementById('edit-name').value = name;
   document.getElementById('edit-description').value = description;
   document.getElementById('edit-image').value = image;
