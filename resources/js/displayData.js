@@ -87,7 +87,8 @@ function updatePopup(){
   document.getElementById('edit-twitter').value = twitter;
   document.getElementById('edit-instagram').value = instagram;
   document.getElementById('edit-website').value = website;
-  document.getElementById('edit-type').value = category;
+  document.getElementById('edit-type').innerHTML = category;
+
 
   if (!popup.classList.contains('active')){
     popup.classList.add('active');
