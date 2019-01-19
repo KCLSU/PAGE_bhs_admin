@@ -82,7 +82,7 @@ function loadArtists(){
 function updatePopup(){
   document.getElementById('edit-name').value = name;
   document.getElementById('edit-description').value = description;
-  document.getElementById('edit-image').value = image;
+  // document.getElementById('edit-image').value = image;
   document.getElementById('edit-facebook').value = facebook;
   document.getElementById('edit-twitter').value = twitter;
   document.getElementById('edit-instagram').value = instagram;
