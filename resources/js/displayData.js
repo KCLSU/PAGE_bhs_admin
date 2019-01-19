@@ -104,10 +104,10 @@ function updateArtist(){
     console.log("ypdates artist")
 }
 
-function hidePopUp(){
+document.getElementById('hidePopup').addEventListener('click', function hidePopUp(){
   if (popup.classList.contains('active')){
     popup.classList.remove('active');
   }
-}
+});
 
 loadArtists();
