@@ -125,6 +125,7 @@ console.log(data)
 console.log("now executing update data")
     writeArtistData(data)
     hidePopUp()
+    loadArtists();
 
 }
 
