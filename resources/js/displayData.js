@@ -72,7 +72,6 @@ function loadArtists(){
       website = data.website;
       key = snapshot.key;
 
-      }
     });
 
   });
