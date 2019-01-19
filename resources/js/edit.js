@@ -14,6 +14,6 @@ export function writeArtistData(data) {
     instagram: data.instagram,
     website: data.website
   };
-  updates['/artists/' + data.key] = updateData;
-  firebase.database().ref().update(updates);
+  // updates['/artists/' + data.key] = updateData;
+  firebase.database().ref('/artists/' + data.key).update(updateData);
 }
