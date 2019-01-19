@@ -1,4 +1,6 @@
 import { config } from './config.js'
+import { writeArtistData } from './edit.js'
+
 var db = firebase.database();
 var ref = db.ref("artists");
 const artistNames = [];
@@ -99,13 +101,15 @@ function deleteArtist(){
   console.log("delete artist")
 }
 
+document.getElementById('update').addEventListener('click', updateArtist);
+
 function updateArtist(){
   // if (imageupload){
   //   //load image to database and reset-image url
   //   image = newImage()
   // }
 
-  category = document.getElementById('edit-artist-type').value;
+  // category = document.getElementById('edit-artist-type').value;
   name = document.getElementById('edit-name').value;
   description = document.getElementById('edit-description').value ;
   facebook = document.getElementById('edit-facebook').value;
