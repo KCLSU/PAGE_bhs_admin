@@ -29,7 +29,6 @@ let key;
 function loadArtists(){
 
   ref.orderByChild("name").on("child_added", function(snapshot) {
-    console.log("List all the Achilles")
     console.log("snapshot key: " + snapshot.key);
     artistNames.push(snapshot.val().name);
     console.log("data snapshot");
@@ -101,13 +100,34 @@ function deleteArtist(){
 }
 
 function updateArtist(){
-    console.log("ypdates artist")
+  if (imageupload){
+    //load image to database and reset-image url
+    image = newImage()
+  }
+
+  category = document.getElementById('edit-artist-type').value;
+  name = document.getElementById('edit-name').value;
+  description = document.getElementById('edit-description').value ;
+  facebook = document.getElementById('edit-facebook').value;
+  instagram = document.getElementById('edit-instagram').value;
+  twitter = document.getElementById('edit-twitter').value;
+  website = document.getElementById('edit-website').value;
+
+  let data = {
+    category, key, image, name, description, facebook, instagram, website, twitter
+  }
+
+    writeArtistData(data)
+    hidePopUp()
+
 }
 
-document.getElementById('hidePopup').addEventListener('click', function hidePopUp(){
+function hidePopUp(){
   if (popup.classList.contains('active')){
     popup.classList.remove('active');
   }
-});
+}
+
+document.getElementById('hidePopup').addEventListener('click', hidePopUp);
 
 loadArtists();

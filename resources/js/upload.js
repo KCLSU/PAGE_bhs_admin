@@ -93,9 +93,7 @@ document.addEventListener('DOMContentLoaded', function(){
         website: website
       }
       console.log(imageURL)
-      console.log(name)
-      console.log(description)
-      console.log(twitter)
+
       updates['/artists/' + postKey] = postData;
       firebase.database().ref().update(updates)
 
