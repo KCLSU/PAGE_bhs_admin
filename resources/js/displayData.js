@@ -100,10 +100,10 @@ function deleteArtist(){
 }
 
 function updateArtist(){
-  if (imageupload){
-    //load image to database and reset-image url
-    image = newImage()
-  }
+  // if (imageupload){
+  //   //load image to database and reset-image url
+  //   image = newImage()
+  // }
 
   category = document.getElementById('edit-artist-type').value;
   name = document.getElementById('edit-name').value;

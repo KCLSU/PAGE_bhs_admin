@@ -1,3 +1,5 @@
+import { config } from './config.js';
+
 function writeArtistData(data) {
   firebase.database().ref('artists/' + data.key).set({
     type: data.category,

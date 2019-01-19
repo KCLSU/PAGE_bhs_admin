@@ -1,5 +1,5 @@
 import { config } from './config.js';
-firebase.initializeApp(config);
+
 
 let imageURL;
 
