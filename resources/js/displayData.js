@@ -13,6 +13,7 @@ const poets = document.getElementById('poets-list');
 const grid = document.getElementById('grid-area');
 const popup = document.querySelectorAll('.popup-container')[0];
 
+console.log("UOPDATED VERSION ----------------")
 
 //EDIT ARTIST DETAILS
 let image;
