@@ -115,12 +115,12 @@ function updateArtist(){
   console.log("selectedFile is: ")
   console.log(newFile)
 
-  if (newFile){
-    let fileName = newFile.name;
-    //load image to database and reset-image url
-    image = uploadImage(newFile, fileName)
-    console.log("image uploaded")
-  }
+  // if (newFile){
+  //   let fileName = newFile.name;
+  //   //load image to database and reset-image url
+  //   image = uploadImage(newFile, fileName)
+  //   console.log("image uploaded")
+  // }
 
   category = document.getElementById('edit-artist-type').value
   name = document.getElementById('edit-name').value;
