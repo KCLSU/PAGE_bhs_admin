@@ -98,7 +98,7 @@ function updatePopup(){
   const newUploadInput = document.getElementById('new-file-select');
   newUploadInput.addEventListener("change", function(e){
     console.log(e.target.files);
-    selectedFile = e.target.files[0];
+    newFile = e.target.files[0];
   })
 
 }
