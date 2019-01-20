@@ -110,7 +110,7 @@ function updateArtist(){
   //   image = newImage()
   // }
 
-  // category = document.getElementById('edit-artist-type').value;
+  category = document.getElementById('edit-artist-type').value
   name = document.getElementById('edit-name').value;
   description = document.getElementById('edit-description').value ;
   facebook = document.getElementById('edit-facebook').value;
@@ -121,9 +121,8 @@ function updateArtist(){
   let data = {
     category, key, name, description, facebook, instagram, website, twitter
   }
-console.log("data to update:")
-console.log(data)
-console.log("now executing update data")
+  
+
     writeArtistData(data)
     hidePopUp()
     document.querySelectorAll('.artist').forEach(name => name.remove());
