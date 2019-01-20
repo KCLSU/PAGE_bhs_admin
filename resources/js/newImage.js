@@ -1,6 +1,7 @@
 import { config } from './config.js';
 
 export function uploadImage(selectedFile, fileName){
+  console.log(image)
   let imageURL;
   var storage = firebase.storage();
   console.log(fileName);
