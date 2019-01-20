@@ -115,35 +115,45 @@ function updateArtist(){
   console.log("selectedFile is: ")
   console.log(newFile)
 
-  // if (newFile){
-  //   let fileName = newFile.name;
-  //   //load image to database and reset-image url
-  //   image = uploadImage(newFile, fileName)
-  //   console.log("image uploaded")
-  // }
+  const promise = new Promise((resolve, reject) =>{
+    if (newFile){
+      let fileName = newFile.name;
+      //load image to database and reset-image url
+      image = uploadImage(newFile, fileName)
+      console.log("image uploaded")
+      resolve(image)
+    }
+  });
 
-  category = document.getElementById('edit-artist-type').value
-  name = document.getElementById('edit-name').value;
-  description = document.getElementById('edit-description').value ;
-  facebook = document.getElementById('edit-facebook').value;
-  instagram = document.getElementById('edit-instagram').value;
-  twitter = document.getElementById('edit-twitter').value;
-  website = document.getElementById('edit-website').value;
+  promise.then(function(error, response, status) {
+    if (error){
+      console.log("Error in promise once resolved "+ error);
+      reject(error);
+    }
+    else {
+      category = document.getElementById('edit-artist-type').value
+      name = document.getElementById('edit-name').value;
+      description = document.getElementById('edit-description').value ;
+      facebook = document.getElementById('edit-facebook').value;
+      instagram = document.getElementById('edit-instagram').value;
+      twitter = document.getElementById('edit-twitter').value;
+      website = document.getElementById('edit-website').value;
 
-  let data = {
-    category, image, key, name, description, facebook, instagram, website, twitter
-  }
+      let data = {
+        category, image, key, name, description, facebook, instagram, website, twitter
+      }
 
-  console.log("about to write data")
-  console.log(data)
+      console.log("about to write data")
+      console.log(data)
 
-    writeArtistData(data)
-    hidePopUp()
-    document.getElementById('new-file-select').value = ''
-    newFile = null;
-    document.querySelectorAll('.artist').forEach(name => name.remove());
-    loadArtists();
-
+      writeArtistData(data)
+      hidePopUp()
+      document.getElementById('new-file-select').value = ''
+      newFile = null;
+      document.querySelectorAll('.artist').forEach(name => name.remove());
+      loadArtists();
+      })
+   }
 }
 
 function hidePopUp(){
