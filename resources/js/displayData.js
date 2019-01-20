@@ -127,7 +127,7 @@ console.log("now executing update data")
     writeArtistData(data)
     hidePopUp()
     document.querySelectorAll('.artist').forEach(name => name.remove());
-    uploadArtists();
+    loadArtists();
 
 }
 
