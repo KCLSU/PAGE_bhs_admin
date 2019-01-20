@@ -33,12 +33,13 @@ export function uploadImage(selectedFile, fileName){
     // Handle successful uploads on complete
     uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
       console.log('File available at', downloadURL);
-    });
+  });
 
     //RETURN UPLOADED IMAGE URL
     imageURL = uploadTask.snapshot.downloadURL;
 
+    });
+
     return imageURL;
     console.log(imageURL)
-
 }
