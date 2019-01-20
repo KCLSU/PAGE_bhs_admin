@@ -154,6 +154,7 @@ function updateArtist(){
       loadArtists();
    };
 });
+};
 
 function hidePopUp(){
   if (popup.classList.contains('active')){
