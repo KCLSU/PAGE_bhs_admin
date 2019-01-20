@@ -146,10 +146,14 @@ function updateArtist(){
         writeArtistData(data)
       }
     });
-  };
+  }
+
+  else if (!newFile){
+   writeArtistData(data)
+  }
 
   else {
-   writeArtistData(data)
+    console.log("Error")
   }
 
   hidePopUp()
