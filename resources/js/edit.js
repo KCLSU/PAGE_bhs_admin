@@ -6,7 +6,7 @@ export function writeArtistData(data) {
 
   var updateData = {
     type: data.category,
-    // url: data.image,
+    url: data.image,
     name: data.name,
     description: data.description,
     twitter: data.twitter,

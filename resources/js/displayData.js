@@ -64,7 +64,7 @@ function loadArtists(){
     }
 
     li.addEventListener('click', function editArtist(){
-      // image = data.image;
+      image = data.url;
       category = type;
       name = data.name;
       description = data.description
@@ -130,7 +130,7 @@ function updateArtist(){
   website = document.getElementById('edit-website').value;
 
   let data = {
-    category, key, name, description, facebook, instagram, website, twitter
+    category, image, key, name, description, facebook, instagram, website, twitter
   }
 
 
