@@ -104,9 +104,9 @@ document.getElementById('update').addEventListener('click', updateArtist);
 
 function updateArtist(){
 
-  const uploadInput = document.getElementById('new-file-select');
+  const newUploadInput = document.getElementById('new-file-select');
   var selectedFile;
-  uploadInput.addEventListener("change", function(e){
+  newUploadInput.addEventListener("change", function(e){
     console.log(e.target.files);
     selectedFile = e.target.files[0];
   })
