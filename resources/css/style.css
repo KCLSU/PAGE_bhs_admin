@@ -32,7 +32,6 @@ a.dc-button {
 
 
 .grid-container {
-  width: 100vw;
   background-color: black;
   overflow-x: hidden;
   min-height: 100vh;
@@ -156,13 +155,20 @@ border-radius: 1em;
 margin: 2em 0.5em;
 }
 
+a.dc-button {
+  background-color: rgb(95,91,163);
+  color: white;
+}
 #add-student h3 {
   background-color: rgb(255,204,102);
 }
 
 #hidePopup{
-  font-size: 1.5em;
+  font-size: 1.7em;
   cursor: pointer;
+  width: 2em;
+  padding: 0.2em;
+  color: white;
 }
 
 #edit-description {
