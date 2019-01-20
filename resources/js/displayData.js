@@ -131,7 +131,9 @@ function updateArtist(){
         //load image to database and reset-image url
         image = uploadImage(newFile, fileName)
         console.log("image uploaded")
-      resolve(image)
+        data.image = image
+        resolve(image)
+      
     });
 
     promise.then(function(error, response, status){
@@ -140,7 +142,6 @@ function updateArtist(){
         reject(error);
       }
       else{
-        data.image = image
         console.log("about to write data WITHIN promise")
         console.log(data)
         writeArtistData(data)
