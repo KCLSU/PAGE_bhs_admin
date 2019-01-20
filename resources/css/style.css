@@ -2,6 +2,16 @@
 h1, h3 {
   text-align: center;
 }
+
+h1 {
+  color: white;
+}
+
+h3 {
+  background-color: rgb(238,125,121);
+  color: white;
+  font-weight: bold;
+}
 .flex-vertical {
   flex-direction: column;
 }
@@ -20,6 +30,7 @@ a.dc-button {
 
 .grid-container {
   width: 100vw;
+  background-color: black;
   overflow-x: hidden;
   min-height: 100vh;
   display: grid;
@@ -113,13 +124,13 @@ input {
 
 .artist {
   cursor: pointer;
+  background-color: white;
 }
 
 .popup-container{
   grid-column: 7 / span 1;
   grid-row: 1 / span 4;
   z-index: 100;
-  padding: 2em;
   display: flex;
   align-items: center;
   background-color: red;
@@ -131,6 +142,7 @@ input {
   padding: 1em;
   display: flex;
   flex-direction: column;
+  background-color: rgb(95,91,163);
 }
 
 .active {
@@ -144,4 +156,8 @@ input {
 
 #edit-description {
   margin: 1em;
+}
+
+#edit-artist-type {
+  margin: 0 1em;
 }
