@@ -1,5 +1,6 @@
 import { config } from './config.js'
 import { writeArtistData } from './edit.js'
+import { uploadImage } from './newImage.js'
 
 var db = firebase.database();
 var ref = db.ref("artists");

@@ -1,9 +1,7 @@
 import { config } from './config.js';
 
-
-let imageURL;
-
-function uploadImage(selectedFile, fileName){
+export function uploadImage(selectedFile, fileName){
+  let imageURL;
   var storage = firebase.storage();
   console.log(fileName);
   var storageRef = firebase.storage().ref('/f35s/' + fileName);
