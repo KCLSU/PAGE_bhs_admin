@@ -32,11 +32,8 @@ let key;
 function loadArtists(){
 
   ref.orderByChild("name").on("child_added", function(snapshot) {
-    console.log("snapshot key: " + snapshot.key);
     artistNames.push(snapshot.val().name);
-    console.log("data snapshot");
     let data = snapshot.val();
-    console.log(data)
     let artistName = snapshot.val().name;
     let type = snapshot.val().type;
     let li = document.createElement('li');
