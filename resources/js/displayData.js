@@ -123,6 +123,8 @@ function updateArtist(){
     category, image, key, name, description, facebook, instagram, website, twitter
   }
 
+  console.log("data BEFORE promise")
+
   if (newFile){
     const promise = new Promise((resolve, reject) =>{
         let fileName = newFile.name;
