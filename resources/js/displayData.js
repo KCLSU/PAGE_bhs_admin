@@ -116,9 +116,9 @@ function updateArtist(){
   console.log(newFile)
 
   if (newFile){
-    var fileName = newFile.name;
+    let fileName = newFile.name;
     //load image to database and reset-image url
-    image = newImage(newFile, fileName)
+    image = uploadImage(newFile, fileName)
   }
 
   category = document.getElementById('edit-artist-type').value
