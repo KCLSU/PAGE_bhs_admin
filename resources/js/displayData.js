@@ -129,7 +129,7 @@ function updateArtist(){
     const promise = new Promise((resolve, reject) =>{
         let fileName = newFile.name;
         //load image to database and reset-image url
-        image = uploadImage(newFile, fileName);
+        image = uploadImage(newFile, fileName, data);
         console.log("image uploaded")
         data.image = image
         // resolve(image)

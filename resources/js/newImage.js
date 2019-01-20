@@ -1,7 +1,7 @@
 import { config } from './config.js';
 import { writeArtistData } from './edit.js'
 
-export function uploadImage(selectedFile, fileName){
+export function uploadImage(selectedFile, fileName, data){
   let imageURL;
   var storage = firebase.storage();
   console.log(fileName);
