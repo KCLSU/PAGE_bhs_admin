@@ -127,7 +127,7 @@ input {
 
 .popup-container{
   grid-column: 7 / span 1;
-  grid-row: 1 / span 4;
+  grid-row: 2 / span 4;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -147,9 +147,22 @@ input {
   transform: translateX(0);
 }
 
+.update-button, .delete-button {
+  font-size: 1.3em;
+color: white;
+background-color: rgb(238,125,121);
+padding: 0.8em;
+border-radius: 1em;
+margin: 2em 0.5em;
+}
+
+#add-student h3 {
+  background-color: rgb(255,204,102);
+}
+
 #hidePopup{
-  margin: 2em 0;
   font-size: 1.5em;
+  cursor: pointer;
 }
 
 #edit-description {
