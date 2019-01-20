@@ -112,7 +112,7 @@ input {
 }
 
 .artist {
-
+  cursor: pointer;
 }
 
 .popup-container{

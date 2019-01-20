@@ -186,7 +186,7 @@
 
   <div id="add-student" class="flex-start-center flex-vertical">
     <h3> Add a student from the database</h3>
-    <div id="filesubmit">
+    <div class="filesubmit">
       <input type="file" id="file-select" />
     </div>
 
@@ -218,15 +218,18 @@
   <div class="popup">
     <i  id="hidePopup" class="fas fa-times" ></i>
     <div data-key=null class="artist-info">
-    <select id="edit-artist-type">
-      <option id="edit-type"></option>
-      <option value="upcoming">upcoming</option>
-      <option value="filmmakers">filmmakers</option>
-      <option value="musicians">musicians</option>
-      <option value="photographers">photographers</option>
-      <option value="artists">fine artists</option>
-      <option value="poets">spoken word</option>
-    </select>
+      <div class="filesubmit">
+        <input type="file" id="new-file-select" />
+      </div>
+      <select id="edit-artist-type">
+        <option id="edit-type"></option>
+        <option value="upcoming">upcoming</option>
+        <option value="filmmakers">filmmakers</option>
+        <option value="musicians">musicians</option>
+        <option value="photographers">photographers</option>
+        <option value="artists">fine artists</option>
+        <option value="poets">spoken word</option>
+      </select>
       <input type="text" id="edit-name">
       <textarea cols="22" rows="8" id="edit-description"></textarea>
       <input type="text" id="edit-facebook" >
@@ -234,10 +237,10 @@
       <input type="text" id="edit-instagram" >
       <input type="text" id="edit-website" >
     </div>
-    <div class="button">
-      <a  id="update" class="update-button"> Update</a>
-      <a class="delete-button" onclick="deleteArtist()"> Delete </a>
-    </div>
+      <div class="button">
+        <a  id="update" class="update-button"> Update</a>
+        <a class="delete-button" onclick="deleteArtist()"> Delete </a>
+      </div>
   </div>
 
 </section>

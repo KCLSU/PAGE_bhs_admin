@@ -105,10 +105,19 @@ function deleteArtist(){
 document.getElementById('update').addEventListener('click', updateArtist);
 
 function updateArtist(){
-  // if (imageupload){
-  //   //load image to database and reset-image url
-  //   image = newImage()
-  // }
+
+  const uploadInput = document.getElementById('new-file-select');
+  var selectedFile;
+  uploadInput.addEventListener("change", function(e){
+    console.log(e.target.files);
+    selectedFile = e.target.files[0];
+  })
+
+  if (selectedFile){
+    var fileName = selectedFile.name;
+    //load image to database and reset-image url
+    image = newImage(selectedFile, fileName)
+  }
 
   category = document.getElementById('edit-artist-type').value
   name = document.getElementById('edit-name').value;
@@ -121,10 +130,11 @@ function updateArtist(){
   let data = {
     category, key, name, description, facebook, instagram, website, twitter
   }
-  
+
 
     writeArtistData(data)
     hidePopUp()
+    document.getElementById('new-file-select').value = ''
     document.querySelectorAll('.artist').forEach(name => name.remove());
     loadArtists();
 

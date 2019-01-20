@@ -3,9 +3,8 @@ import { config } from './config.js';
 
 let imageURL;
 
-function uploadImage(selectedFile){
+function uploadImage(selectedFile, fileName){
   var storage = firebase.storage();
-  var fileName = selectedFile.name;
   console.log(fileName);
   var storageRef = firebase.storage().ref('/f35s/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
@@ -42,5 +41,6 @@ function uploadImage(selectedFile){
     imageURL = uploadTask.snapshot.downloadURL;
 
     return imageURL;
+    console.log(imageURL)
 
 }

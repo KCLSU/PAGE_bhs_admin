@@ -99,7 +99,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
       const allInputs = document.querySelectorAll('.add-form input');
       allInputs.forEach(input => input.value = '')
-    });
+      });
+      document.getElementById('file-select').value = '';
   }
 
 
