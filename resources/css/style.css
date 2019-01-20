@@ -5,12 +5,15 @@ h1, h3 {
 
 h1 {
   color: white;
+  font-weight: bold;
 }
 
 h3 {
   background-color: rgb(238,125,121);
   color: white;
   font-weight: bold;
+  width: 100%;
+    padding: 1em;
 }
 .flex-vertical {
   flex-direction: column;
@@ -50,29 +53,24 @@ a.dc-button {
 
 #upcoming{
     grid-area: upcoming;
-    background-color: navyBlue;
 }
 
 
 #filmmakers{
     grid-area: filmmakers;
-    background-color: green;
 }
 
 #musicians{
     grid-area: musicians;
-    background-color: red;
 }
 
 
 #photographers {
     grid-area: photo;
-    background-color: blue;
 }
 
 #artists{
     grid-area: artists;
-    background-color: yellow;
 }
 
 #poets{
@@ -81,12 +79,12 @@ a.dc-button {
 
 #add-student{
     grid-area: add;
-    background-color: pink;
+    background-color: rgb(255,204,102);
 }
 
 
  .list {
-  width: 70%;
+  width: 90%;
   margin: auto;
   margin:0;
   padding: 0;
@@ -94,7 +92,7 @@ a.dc-button {
 }
 
 .list li {
-  padding: 0.5em;
+  padding: 1em;
   border: 1px solid black;;
   font-weight: bold;
 text-align: center;
