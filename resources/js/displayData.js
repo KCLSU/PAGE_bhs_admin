@@ -125,7 +125,7 @@ function updateArtist(){
     }
   });
 
-  promise.then(function(error, response, status) {
+  promise.then(function(error, response, status){
     if (error){
       console.log("Error in promise once resolved "+ error);
       reject(error);
@@ -152,9 +152,8 @@ function updateArtist(){
       newFile = null;
       document.querySelectorAll('.artist').forEach(name => name.remove());
       loadArtists();
-      })
-   }
-}
+   };
+});
 
 function hidePopUp(){
   if (popup.classList.contains('active')){
