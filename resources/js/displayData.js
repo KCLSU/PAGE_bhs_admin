@@ -135,6 +135,7 @@ function updateArtist(){
   }
 
   console.log("about to write data")
+  console.log(data)
 
     writeArtistData(data)
     hidePopUp()
