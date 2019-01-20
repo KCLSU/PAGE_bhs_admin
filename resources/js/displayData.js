@@ -111,49 +111,51 @@ document.getElementById('update').addEventListener('click', updateArtist);
 
 function updateArtist(){
   console.log(image)
+  category = document.getElementById('edit-artist-type').value
+  name = document.getElementById('edit-name').value;
+  description = document.getElementById('edit-description').value ;
+  facebook = document.getElementById('edit-facebook').value;
+  instagram = document.getElementById('edit-instagram').value;
+  twitter = document.getElementById('edit-twitter').value;
+  website = document.getElementById('edit-website').value;
 
-  console.log("selectedFile is: ")
-  console.log(newFile)
+  let data = {
+    category, image, key, name, description, facebook, instagram, website, twitter
+  }
 
-  const promise = new Promise((resolve, reject) =>{
-    if (newFile){
-      let fileName = newFile.name;
-      //load image to database and reset-image url
-      image = uploadImage(newFile, fileName)
-      console.log("image uploaded")
-    }
-    resolve(image)
-  });
+  if (newFile){
+    const promise = new Promise((resolve, reject) =>{
+        let fileName = newFile.name;
+        //load image to database and reset-image url
+        image = uploadImage(newFile, fileName)
+        console.log("image uploaded")
+      resolve(image)
+    });
 
-  promise.then(function(error, response, status){
-    if (error){
-      console.log("Error in promise once resolved "+ error);
-      reject(error);
-    }
-    else {
-      category = document.getElementById('edit-artist-type').value
-      name = document.getElementById('edit-name').value;
-      description = document.getElementById('edit-description').value ;
-      facebook = document.getElementById('edit-facebook').value;
-      instagram = document.getElementById('edit-instagram').value;
-      twitter = document.getElementById('edit-twitter').value;
-      website = document.getElementById('edit-website').value;
-
-      let data = {
-        category, image, key, name, description, facebook, instagram, website, twitter
+    promise.then(function(error, response, status){
+      if (error){
+        console.log("Error in promise once resolved "+ error);
+        reject(error);
       }
+      else {
+        data.image = image
+        console.log("about to write data WITHIN promise")
+        console.log(data)
+        writeArtistData(data)
+      }
+    });
+  };
 
-      console.log("about to write data")
-      console.log(data)
+  else{
+   writeArtistData(data)
+  }
 
-      writeArtistData(data)
-      hidePopUp()
-      document.getElementById('new-file-select').value = ''
-      newFile = null;
-      document.querySelectorAll('.artist').forEach(name => name.remove());
-      loadArtists();
-   };
-});
+  hidePopUp()
+  document.getElementById('new-file-select').value = ''
+  newFile = null;
+  document.querySelectorAll('.artist').forEach(name => name.remove());
+  loadArtists();
+
 };
 
 function hidePopUp(){
