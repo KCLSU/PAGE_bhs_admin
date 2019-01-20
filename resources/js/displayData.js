@@ -110,7 +110,7 @@ function deleteArtist(){
 document.getElementById('update').addEventListener('click', updateArtist);
 
 function updateArtist(){
-
+  console.log(image)
 
   console.log("selectedFile is: ")
   console.log(newFile)
