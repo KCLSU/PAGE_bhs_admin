@@ -113,7 +113,7 @@ function updateArtist(){
 
 
   console.log("selectedFile is: ")
-  console.log(selectedFile)
+  console.log(newFile)
 
   if (newFile){
     var fileName = newFile.name;
@@ -137,6 +137,7 @@ function updateArtist(){
     writeArtistData(data)
     hidePopUp()
     document.getElementById('new-file-select').value = ''
+    newFile = null;
     document.querySelectorAll('.artist').forEach(name => name.remove());
     loadArtists();
 
