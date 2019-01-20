@@ -125,7 +125,7 @@ function updateArtist(){
 
   console.log("data BEFORE promise")
 
-  if (newFile){
+  if(newFile){
     const promise = new Promise((resolve, reject) =>{
         let fileName = newFile.name;
         //load image to database and reset-image url
@@ -139,7 +139,7 @@ function updateArtist(){
         console.log("Error in promise once resolved "+ error);
         reject(error);
       }
-      else {
+      else{
         data.image = image
         console.log("about to write data WITHIN promise")
         console.log(data)
@@ -148,7 +148,7 @@ function updateArtist(){
     });
   };
 
-  else{
+  else {
    writeArtistData(data)
   }
 
