@@ -28,6 +28,7 @@ let twitter;
 let instagram;
 let website;
 let key;
+let newFile;
 
 function loadArtists(){
 
@@ -94,6 +95,12 @@ function updatePopup(){
     popup.classList.add('active');
   }
 
+  const newUploadInput = document.getElementById('new-file-select');
+  newUploadInput.addEventListener("change", function(e){
+    console.log(e.target.files);
+    selectedFile = e.target.files[0];
+  })
+
 }
 
 function deleteArtist(){
@@ -104,20 +111,14 @@ document.getElementById('update').addEventListener('click', updateArtist);
 
 function updateArtist(){
 
-  const newUploadInput = document.getElementById('new-file-select');
-  var selectedFile;
-  newUploadInput.addEventListener("change", function(e){
-    console.log(e.target.files);
-    selectedFile = e.target.files[0];
-  })
 
   console.log("selectedFile is: ")
   console.log(selectedFile)
 
-  if (selectedFile){
-    var fileName = selectedFile.name;
+  if (newFile){
+    var fileName = newFile.name;
     //load image to database and reset-image url
-    image = newImage(selectedFile, fileName)
+    image = newImage(newFile, fileName)
   }
 
   category = document.getElementById('edit-artist-type').value
