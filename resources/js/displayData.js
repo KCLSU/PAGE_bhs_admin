@@ -121,8 +121,8 @@ function updateArtist(){
       //load image to database and reset-image url
       image = uploadImage(newFile, fileName)
       console.log("image uploaded")
-      resolve(image)
     }
+    resolve(image)
   });
 
   promise.then(function(error, response, status){
