@@ -119,6 +119,7 @@ function updateArtist(){
     let fileName = newFile.name;
     //load image to database and reset-image url
     image = uploadImage(newFile, fileName)
+    console.log("image uploaded")
   }
 
   category = document.getElementById('edit-artist-type').value
@@ -133,6 +134,7 @@ function updateArtist(){
     category, image, key, name, description, facebook, instagram, website, twitter
   }
 
+  console.log("about to write data")
 
     writeArtistData(data)
     hidePopUp()
