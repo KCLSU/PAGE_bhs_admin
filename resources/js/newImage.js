@@ -6,7 +6,6 @@ export function uploadImage(selectedFile, fileName){
   console.log(fileName);
   var storageRef = firebase.storage().ref('/f35s/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
-  var imageURL;
 
     // Register three observers:
   // 1. 'state_changed' observer, called any time the state changes
