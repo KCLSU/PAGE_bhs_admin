@@ -38,7 +38,6 @@ export function uploadImage(selectedFile, fileName){
     imageURL = uploadTask.snapshot.downloadURL;
 
     });
-
-    return imageURL;
     console.log(imageURL)
+    return imageURL;
 }
