@@ -39,6 +39,7 @@ function loadArtists(){
     let artistName = snapshot.val().name;
     let type = snapshot.val().type;
     let li = document.createElement('li');
+    li.classList.add('artist')
     li.innerHTML = artistName;
     switch(type){
       case "upcoming" :
@@ -125,7 +126,8 @@ console.log(data)
 console.log("now executing update data")
     writeArtistData(data)
     hidePopUp()
-    
+    document.querySelectorAll('.artist').forEach(name => name.remove());
+    uploadArtists();
 
 }
 
