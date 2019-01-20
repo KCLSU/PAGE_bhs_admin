@@ -124,6 +124,11 @@ input {
   background-color: white;
 }
 
+.artist-info {
+  display: flex;
+    flex-direction: column;
+}
+
 .popup-container{
   grid-column: 7 / span 1;
   grid-row: 2 / span 4;
