@@ -114,6 +114,9 @@ function updateArtist(){
     selectedFile = e.target.files[0];
   })
 
+  console.log("selectedFile is: ")
+  console.log(selectedFile)
+
   if (selectedFile){
     var fileName = selectedFile.name;
     //load image to database and reset-image url
