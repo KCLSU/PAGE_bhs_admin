@@ -14,6 +14,7 @@ h3 {
   font-weight: bold;
   width: 100%;
     padding: 1em;
+    margin: 0;
 }
 .flex-vertical {
   flex-direction: column;
@@ -134,8 +135,7 @@ input {
   grid-row: 2 / span 4;
   z-index: 100;
   display: flex;
-  align-items: center;
-  background-color: red;
+  background-color: rgb(95,91,163);
   transform: translateX(1000px);
   transition: transform 2s;
 }
@@ -152,11 +152,7 @@ input {
 }
 
 .update-button, .delete-button {
-  font-size: 1.3em;
-color: white;
 background-color: rgb(238,125,121);
-padding: 0.8em;
-border-radius: 1em;
 margin: 2em 0.5em;
 }
 
