@@ -1,6 +1,6 @@
 import { config } from './config.js'
-import { writeArtistData } from './edit.js'
-import { uploadImage } from './newImage.js'
+import { updateArtist } from './updateArtist.js'
+import { uploadNewImage } from './uploadNewImage.js'
 
 var db = firebase.database();
 var ref = db.ref("artists");
@@ -81,6 +81,7 @@ function loadArtists(){
 }
 
 function updatePopup(){
+  clearUploadedImage()
   document.getElementById('edit-name').value = name;
   document.getElementById('edit-description').value = description;
   // document.getElementById('edit-image').value = image;
@@ -109,11 +110,14 @@ function deleteArtist(){
 
 document.getElementById('update').addEventListener('click', updateArtist);
 
-function updateArtist(){
+function clearUploadedImage(){
   document.getElementById('new-file-select').value = ''
   newFile = null;
+}
 
-  console.log(image)
+function updateArtist(){
+  clearUploadedImage()
+
   category = document.getElementById('edit-artist-type').value
   name = document.getElementById('edit-name').value;
   description = document.getElementById('edit-description').value ;
@@ -132,7 +136,7 @@ function updateArtist(){
     const promise = new Promise((resolve, reject) =>{
         let fileName = newFile.name;
         //load image to database and reset-image url
-        image = uploadImage(newFile, fileName, data);
+        image = uploadNewImage(newFile, fileName, data);
         console.log("image uploaded")
         data.image = image
         // resolve(image)
@@ -146,13 +150,13 @@ function updateArtist(){
       else{
         console.log("about to write data WITHIN promise")
         console.log(data)
-        writeArtistData(data)
+        updateArtist(data)
       }
     });
   }
 
   else if (!newFile){
-   writeArtistData(data)
+   updateArtist(data)
   }
 
   else {
@@ -160,8 +164,6 @@ function updateArtist(){
   }
 
   hidePopUp()
-  document.getElementById('new-file-select').value = ''
-  newFile = null;
   document.querySelectorAll('.artist').forEach(name => name.remove());
   loadArtists();
 };
@@ -170,7 +172,7 @@ function hidePopUp(){
   if (popup.classList.contains('active')){
     popup.classList.remove('active');
   }
-  document.getElementById('new-file-select').value = ''
+  clearUploadedImage()
 }
 
 document.getElementById('hidePopup').addEventListener('click', hidePopUp);

@@ -1,7 +1,7 @@
 import { config } from './config.js';
-import { writeArtistData } from './edit.js'
+import { updateArtist } from './updateArtist.js'
 
-export function uploadImage(selectedFile, fileName, data){
+export function uploadNewImage(selectedFile, fileName, data){
   let imageURL;
   var storage = firebase.storage();
   console.log(fileName);
@@ -40,6 +40,6 @@ export function uploadImage(selectedFile, fileName, data){
     console.log(imageURL)
     // return imageURL;
     data.image = imageURL
-    writeArtistData(data)
+    updateArtist(data)
     });
 }

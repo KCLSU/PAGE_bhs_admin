@@ -1,6 +1,6 @@
 import { config } from './config.js';
 
-export function writeArtistData(data) {
+export function updateArtist(data) {
   // var postKey = firebase.database().ref('artists/').child(data.key).push().key;
   var updates = {};
 

@@ -100,6 +100,11 @@ text-align: center;
   list-style: none;
 }
 
+.list li:hover {
+  background-color: rgb(255,204,102);
+  color: white;
+}
+
 .add-form {
   display: flex;
   flex-direction: column;
