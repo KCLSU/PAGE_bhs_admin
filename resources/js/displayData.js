@@ -108,14 +108,14 @@ function deleteArtist(){
   console.log("delete artist")
 }
 
-document.getElementById('update').addEventListener('click', updateArtist);
+document.getElementById('update').addEventListener('click', prepareToUpdate);
 
 function clearUploadedImage(){
   document.getElementById('new-file-select').value = ''
   newFile = null;
 }
 
-function updateArtist(){
+function prepareToUpdate(){
   clearUploadedImage()
 
   category = document.getElementById('edit-artist-type').value
