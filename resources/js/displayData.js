@@ -18,18 +18,10 @@ const popup = document.querySelectorAll('.popup-container')[0];
 
 console.log("UOPDATED VERSION ----------------")
 
-//EDIT ARTIST DETAILS
-let image;
-let category;
-let name;
-let description;
-let facebook;
-let twitter;
-let instagram;
-let website;
-let key;
-let newFile;
+//CREATE DATA VARIABLES
+let image, category, name, description, facebook, twitter, instagram, website, key, newFile;
 
+//FETCH DATA FROM FIREBASE
 function loadArtists(){
 
   ref.orderByChild("name").on("child_added", function(snapshot) {
@@ -126,12 +118,12 @@ function prepareToUpdate(){
   twitter = document.getElementById('edit-twitter').value;
   website = document.getElementById('edit-website').value;
 
+//CREATE OBJECT TO PASS TO UPDATE FUNCTION
   let data = {
     category, image, key, name, description, facebook, instagram, website, twitter
   }
 
-  console.log("data BEFORE promise")
-
+//IF AN IMAGE HAS BEEN UPLOADED
   if(newFile){
     const promise = new Promise((resolve, reject) =>{
         let fileName = newFile.name;
