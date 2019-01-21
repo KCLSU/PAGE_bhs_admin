@@ -151,9 +151,8 @@ input {
   transform: translateX(0);
 }
 
-.update-button, .delete-button {
+#update, #delete{
 background-color: rgb(238,125,121);
-margin: 2em 0.5em;
 }
 
 a.dc-button {
