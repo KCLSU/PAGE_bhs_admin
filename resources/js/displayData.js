@@ -110,6 +110,9 @@ function deleteArtist(){
 document.getElementById('update').addEventListener('click', updateArtist);
 
 function updateArtist(){
+  document.getElementById('new-file-select').value = ''
+  newFile = null;
+
   console.log(image)
   category = document.getElementById('edit-artist-type').value
   name = document.getElementById('edit-name').value;
@@ -161,13 +164,13 @@ function updateArtist(){
   newFile = null;
   document.querySelectorAll('.artist').forEach(name => name.remove());
   loadArtists();
-
 };
 
 function hidePopUp(){
   if (popup.classList.contains('active')){
     popup.classList.remove('active');
   }
+  document.getElementById('new-file-select').value = ''
 }
 
 document.getElementById('hidePopup').addEventListener('click', hidePopUp);
