@@ -82,7 +82,7 @@ function updatePopup(){
   document.getElementById('edit-twitter').value = twitter;
   document.getElementById('edit-instagram').value = instagram;
   document.getElementById('edit-website').value = website;
-  document.getElementById('edit-artist-type').innerHTML = category;
+  document.getElementById('edit-artist-type').value = category;
 
 
   if (!popup.classList.contains('active')){
