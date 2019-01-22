@@ -1,5 +1,6 @@
 import { config } from './config.js'
 import { updateArtist } from './updateArtist.js'
+import { deleteArtist } from './deleteArtist.js'
 import { uploadNewImage } from './uploadNewImage.js'
 
 var db = firebase.database();
@@ -96,11 +97,16 @@ function updatePopup(){
 
 }
 
-function deleteArtist(){
+function prepareToDelete(data){
   console.log("delete artist")
+  deleteArtist(data);
+  hidePopUp()
+  document.querySelectorAll('.artist').forEach(name => name.remove());
+  loadArtists();
 }
 
 document.getElementById('update').addEventListener('click', prepareToUpdate);
+document.getElementById('delete').addEventListener('click', prepareToDelete);
 
 function clearUploadedImage(){
   document.getElementById('new-file-select').value = ''
