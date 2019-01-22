@@ -97,7 +97,7 @@ function updatePopup(){
 
 }
 
-function prepareToDelete(key){
+function prepareToDelete(){
   console.log("delete artist")
   deleteArtist(key);
   hidePopUp()
