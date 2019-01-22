@@ -97,9 +97,9 @@ function updatePopup(){
 
 }
 
-function prepareToDelete(data){
+function prepareToDelete(key){
   console.log("delete artist")
-  deleteArtist(data);
+  deleteArtist(key);
   hidePopUp()
   document.querySelectorAll('.artist').forEach(name => name.remove());
   loadArtists();

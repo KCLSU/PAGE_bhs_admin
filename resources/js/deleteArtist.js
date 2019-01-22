@@ -1,7 +1,7 @@
 import { config } from './config.js';
 
 
-export function deleteArtist(data) {
-  firebase.database().ref('/artists/' + data.key).remove();
-  console.log("artist removed: " + data.key)
+export function deleteArtist(key) {
+  firebase.database().ref('/artists/' + key).remove();
+  console.log("artist removed: " + key)
 }
