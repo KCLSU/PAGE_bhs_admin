@@ -84,7 +84,8 @@ function updatePopup(){
   document.getElementById('edit-instagram').value = instagram;
   document.getElementById('edit-website').value = website;
   document.getElementById('edit-artist-type').value = category;
-
+  console.log("What is UPCOMING?")
+  console.log(upcoming)
   if (upcoming){
       document.getElementById('edit-upcoming').value = upcomingEvent;
   }
