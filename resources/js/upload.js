@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function(){
         facebook: facebook,
         instagram: instagram,
         website: website,
-        upcoming: upcomingEvent
+        upcomingEvent: upcomingEvent
       }
       console.log(imageURL)
 

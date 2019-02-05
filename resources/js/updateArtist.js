@@ -12,7 +12,8 @@ export function updateArtist(data) {
     twitter: data.twitter,
     facebook: data.facebook,
     instagram: data.instagram,
-    website: data.website
+    website: data.website,
+    upcomingEvent: data.upcomingEvent
   };
   // updates['/artists/' + data.key] = updateData;
   firebase.database().ref('/artists/' + data.key).update(updateData);
