@@ -86,7 +86,7 @@ function updatePopup(){
   document.getElementById('edit-artist-type').value = category;
 
   if (upcoming){
-      document.getElementById('upcoming-event').value = upcomingEvent;
+      document.getElementById('edit-upcoming').value = upcomingEvent;
   }
 
 
