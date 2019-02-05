@@ -184,3 +184,11 @@ a.dc-button {
 #edit-artist-type {
   margin: 0 1em;
 }
+
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
