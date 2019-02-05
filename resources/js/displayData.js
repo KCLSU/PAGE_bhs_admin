@@ -84,6 +84,7 @@ function updatePopup(){
   document.getElementById('edit-instagram').value = instagram;
   document.getElementById('edit-website').value = website;
   document.getElementById('edit-artist-type').value = category;
+  document.getElementById('edit-upcoming').value = '';
   console.log("What is UPCOMING?")
   console.log(upcomingEvent)
   if (upcomingEvent){
@@ -91,8 +92,6 @@ function updatePopup(){
       console.log("AND NOW UPCOMING?")
       console.log(upcomingEvent)
   }
-
-
 
   if (!popup.classList.contains('active')){
     popup.classList.add('active');
