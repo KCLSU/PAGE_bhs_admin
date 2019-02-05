@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let twitter = document.getElementById('twitter').value;
     let instagram = document.getElementById('instagram').value;
     let website = document.getElementById('website').value;
+    let upcomingEvent = document.getElementById('upcoming-event').value;
     let progress = document.getElementById('progress');
     let progressState = document.getElementById('progress-state');
 
@@ -90,7 +91,8 @@ document.addEventListener('DOMContentLoaded', function(){
         twitter: twitter,
         facebook: facebook,
         instagram: instagram,
-        website: website
+        website: website,
+        upcoming: upcomingEvent
       }
       console.log(imageURL)
 

@@ -20,7 +20,7 @@ const popup = document.querySelectorAll('.popup-container')[0];
 console.log("UOPDATED VERSION ----------------")
 
 //CREATE DATA VARIABLES
-let image, category, name, description, facebook, twitter, instagram, website, key, newFile;
+let image, category, name, upcoming, description, facebook, twitter, instagram, website, key, newFile;
 
 //FETCH DATA FROM FIREBASE
 function loadArtists(){
@@ -65,6 +65,7 @@ function loadArtists(){
       twitter = data.twitter;
       instagram = data.instagram;
       website = data.website;
+      upcoming = data.upcoming;
       key = snapshot.key;
       updatePopup()
     });
@@ -84,6 +85,11 @@ function updatePopup(){
   document.getElementById('edit-website').value = website;
   document.getElementById('edit-artist-type').value = category;
 
+  if (upcoming){
+      document.getElementById('upcoming-event').value = upcoming;
+  }
+
+
 
   if (!popup.classList.contains('active')){
     popup.classList.add('active');
@@ -91,7 +97,6 @@ function updatePopup(){
 
   const newUploadInput = document.getElementById('new-file-select');
   newUploadInput.addEventListener("change", function(e){
-    console.log(e.target.files);
     newFile = e.target.files[0];
   })
 
@@ -123,10 +128,11 @@ function prepareToUpdate(){
   instagram = document.getElementById('edit-instagram').value;
   twitter = document.getElementById('edit-twitter').value;
   website = document.getElementById('edit-website').value;
+  upcoming = document.getElementById('edit-upcoming').value;
 
 //CREATE OBJECT TO PASS TO UPDATE FUNCTION
   let data = {
-    category, image, key, name, description, facebook, instagram, website, twitter
+    category, image, key, name, description, facebook, instagram, upcoming, website, twitter
   }
 
 //IF AN IMAGE HAS BEEN UPLOADED
