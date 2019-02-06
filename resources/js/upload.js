@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function(){
     console.log("selected File")
     console.log(selectedFile)
     if (!selectedFile){
-      progress.innerHTML =`<p class="fail"> No image uploaded silly!</p>`
+      progress.innerHTML =`<p class="fail"> No image uploaded, silly!</p>`
       console.log("terminate function")
       return;
     }
@@ -113,8 +113,10 @@ document.addEventListener('DOMContentLoaded', function(){
       allInputs.forEach(input => input.value = '')
       });
       document.getElementById('file-select').value = '';
-      progress.innerHTML = `<p class="success"> Upload Successful bro</p> `
+      document.querySelectorAll('textarea').forEach(area => area.input = '');
+      progress.innerHTML = `<p class="success"> Upload successful bro</p> `
       selectedFile = '';
+
   }
 
 
