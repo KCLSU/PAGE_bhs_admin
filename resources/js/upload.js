@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function(){
   uploadButton.addEventListener("click", uploadFile);
 
   function uploadFile(e){
-
+    console.log("selected File")
+    console.log(selectedFile)
     if (!selectedFile){
       progress.innerHTML =`<p class="fail"> No image uploaded!></p>`
       console.log("terminate function")
