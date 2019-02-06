@@ -197,3 +197,13 @@ a.dc-button {
 .val-field:valid {
   border-bottom: 2px solid green;
 }
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+
+.fail {
+  color: red;
+  font-weight: bold;
+}
