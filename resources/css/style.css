@@ -38,7 +38,7 @@ a.dc-button {
   min-height: 100vh;
   display: grid;
   grid-gap: 0.5em;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-areas:
     "banner banner banner banner banner"
     "upcoming performers xhibitArtists specialActs add"
