@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function(){
       allInputs.forEach(input => input.value = '')
       });
       document.getElementById('file-select').value = '';
-      document.querySelectorAll('textarea').forEach(area => area.input = '');
+      document.querySelectorAll('.textarea').forEach(area => area.value = '');
       progress.innerHTML = `<p class="success"> Upload successful bro</p> `
       selectedFile = '';
 
