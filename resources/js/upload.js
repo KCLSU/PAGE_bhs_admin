@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function(){
       });
       document.getElementById('file-select').value = '';
       progress.innerHTML = `<p class="success"> Upload Successful bro</p> `
+      selectedFile = '';
   }
 
 
