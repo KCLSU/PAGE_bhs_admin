@@ -123,6 +123,13 @@ input[type="radio"], .radio {
 input {
   margin: 1em;
   height: 2em;
+  border: none;
+  background-color: #ffffff;
+}
+
+textarea {
+  border: none;
+  background-color: #ffffff;
 }
 
 .artist {
