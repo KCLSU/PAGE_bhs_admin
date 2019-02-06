@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var fileName = selectedFile.name;
 
     console.log(fileName);
-    var storageRef = firebase.storage().ref('/f35s/' + fileName);
+    var storageRef = firebase.storage().ref('/profiles/' + fileName);
     var uploadTask = storageRef.put(selectedFile);
     var imageURL;
 

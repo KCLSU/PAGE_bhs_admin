@@ -5,7 +5,7 @@ export function uploadNewImage(selectedFile, fileName, data){
   let imageURL;
   var storage = firebase.storage();
   console.log(fileName);
-  var storageRef = firebase.storage().ref('/f35s/' + fileName);
+  var storageRef = firebase.storage().ref('/profiles/' + fileName);
   var uploadTask = storageRef.put(selectedFile);
 
     // Register three observers:
