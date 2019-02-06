@@ -103,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function(){
       allInputs.forEach(input => input.value = '')
       });
       document.getElementById('file-select').value = '';
+      progress.innerHTML = `<p class="success"> Upload Succesful </p> `
   }
 
 
