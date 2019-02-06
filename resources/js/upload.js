@@ -30,8 +30,15 @@ document.addEventListener('DOMContentLoaded', function(){
   uploadButton.addEventListener("click", uploadFile);
 
   function uploadFile(e){
+
+    if (!selectedFile){
+      progress.innerHTML =`<p class="fail"> No image uploaded!></p>`
+      return;
+    }
+    
     var storage = firebase.storage();
     var fileName = selectedFile.name;
+
     console.log(fileName);
     var storageRef = firebase.storage().ref('/f35s/' + fileName);
     var uploadTask = storageRef.put(selectedFile);
@@ -82,10 +89,6 @@ document.addEventListener('DOMContentLoaded', function(){
       //ADD METADATA TO REAL TIME DATABASE
       imageURL = uploadTask.snapshot.downloadURL;
 
-      if (!imageURL){
-        progress.innerHTML =`<p class="fail"> No image uploaded!></p>`
-        return;
-      }
       var postKey = firebase.database().ref('artists/').push().key;
       var updates = {};
       var postData = {
