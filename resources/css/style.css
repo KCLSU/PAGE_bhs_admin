@@ -185,10 +185,10 @@ a.dc-button {
   margin: 0 1em;
 }
 
-input:invalid {
-  border: 2px dashed red;
+.val-field:invalid {
+  border-bottom: 2px solid black;
 }
 
-input:valid {
-  border: 2px solid green;
+.val-field:valid {
+  border-bottom: 2px solid green;
 }
