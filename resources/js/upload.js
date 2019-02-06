@@ -81,6 +81,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
       //ADD METADATA TO REAL TIME DATABASE
       imageURL = uploadTask.snapshot.downloadURL;
+
+      if (!imageURL){
+        progress.innerHTML =`<p class="fail"> No image uploaded!></p>`
+      }
       var postKey = firebase.database().ref('artists/').push().key;
       var updates = {};
       var postData = {
