@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
     const uploadButton = document.getElementById('upload-button');
     const uploadInput = document.getElementById('file-select');
+    let progress = document.getElementById('progress');
+    let progressState = document.getElementById('progress-state');
 
     // Initialize Firebase
 
@@ -55,8 +57,6 @@ document.addEventListener('DOMContentLoaded', function(){
     let instagram = document.getElementById('instagram').value;
     let website = document.getElementById('website').value;
     let upcomingEvent = document.getElementById('upcoming-event').value;
-    let progress = document.getElementById('progress');
-    let progressState = document.getElementById('progress-state');
 
       // Register three observers:
     // 1. 'state_changed' observer, called any time the state changes
