@@ -33,9 +33,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
     if (!selectedFile){
       progress.innerHTML =`<p class="fail"> No image uploaded!></p>`
+      console.log("terminate function")
       return;
     }
-    
+
     var storage = firebase.storage();
     var fileName = selectedFile.name;
 
