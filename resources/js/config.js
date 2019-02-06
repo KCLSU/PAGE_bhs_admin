@@ -1,8 +1,8 @@
-export const config = {
-  apiKey: "AIzaSyC7o0tWg-RBuxib1zEv_v6eRE2DLO_HxDI",
-  authDomain: "happy-sad-ui.firebaseapp.com",
-  databaseURL: "https://happy-sad-ui.firebaseio.com",
-  projectId: "happy-sad-ui",
-  storageBucket: "happy-sad-ui.appspot.com",
-  messagingSenderId: "363245085216"
+export var config = {
+  apiKey: "AIzaSyDQ3esJS1lNdAEaSqO8-b0QjkzGD1hs3Jc",
+  authDomain: "bush-house-sessions.firebaseapp.com",
+  databaseURL: "https://bush-house-sessions.firebaseio.com",
+  projectId: "bush-house-sessions",
+  storageBucket: "bush-house-sessions.appspot.com",
+  messagingSenderId: "931471117587"
 };
