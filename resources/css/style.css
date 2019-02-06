@@ -40,10 +40,10 @@ a.dc-button {
   grid-gap: 0.5em;
   grid-template-columns: repeat(7, 1fr);
   grid-template-areas:
-    "banner banner banner banner banner banner banner"
-    "upcoming filmmakers musicians photo artists poets add"
-    "upcoming filmmakers musicians photo artists poets add"
-    "upcoming filmmakers musicians photo artists poets add";
+    "banner banner banner banner banner"
+    "upcoming performers xhibitArtists specialActs add"
+    "upcoming performers xhibitArtists specialActs add"
+    "upcoming performers xhibitArtists specialActs add";
 }
 
 .banner {
@@ -56,26 +56,19 @@ a.dc-button {
 }
 
 
-#filmmakers{
-    grid-area: filmmakers;
+#perfomers{
+    grid-area: performers;
 }
 
-#musicians{
-    grid-area: musicians;
+#xhibitArtists{
+    grid-area: xhibitArtists;
 }
 
 
-#photographers {
-    grid-area: photo;
+#specialActs{
+    grid-area: specialActs;
 }
 
-#artists{
-    grid-area: artists;
-}
-
-#poets{
-    grid-area: poets;
-}
 
 #add-student{
     grid-area: add;
@@ -141,7 +134,7 @@ textarea {
 }
 
 .popup-container{
-  grid-column: 7 / span 1;
+  grid-column: 5 / span 1;
   grid-row: 2 / span 4;
   z-index: 100;
   display: flex;

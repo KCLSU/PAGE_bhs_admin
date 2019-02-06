@@ -9,15 +9,13 @@ const artistNames = [];
 
 // DOM SELECTIONS
 const upcoming = document.getElementById('upcoming-list');
-const filmmakers = document.getElementById('filmmakers-list');
-const musicians = document.getElementById('musicians-list');
-const photographers = document.getElementById('photographers-list');
-const artists = document.getElementById('artists-list');
-const poets = document.getElementById('poets-list');
+const performers = document.getElementById('performers-list');
+const xhibitArtists = document.getElementById('xhibitArtists-list');
+const specialActs = document.getElementById('specialActs-list');
 const grid = document.getElementById('grid-area');
 const popup = document.querySelectorAll('.popup-container')[0];
 
-console.log("UOPDATED VERSION ----------------")
+console.log("UPDATED VERSION ----------------")
 
 //CREATE DATA VARIABLES
 let image, category, name, upcomingEvent, description, facebook, twitter, instagram, website, key, newFile;
@@ -37,20 +35,14 @@ function loadArtists(){
       case "upcoming" :
         upcoming.appendChild(li);
       break;
-      case "filmmakers" :
-        filmmakers.appendChild(li);
+      case "performers" :
+        performers.appendChild(li);
       break;
-      case "musicians" :
-        musicians.appendChild(li);
+      case "xhibitArtists" :
+        xhibitArtists.appendChild(li);
       break;
-      case "photographers" :
-        photographers.appendChild(li);
-      break;
-      case "artists" :
-        artists.appendChild(li);
-      break;
-      case "poets" :
-        poets.appendChild(li);
+      case "specialActs" :
+        specialActs.appendChild(li);
       break;
       default: console.log("Artist does not fall into category")
 
