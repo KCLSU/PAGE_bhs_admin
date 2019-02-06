@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
       if (!imageURL){
         progress.innerHTML =`<p class="fail"> No image uploaded!></p>`
+        return;
       }
       var postKey = firebase.database().ref('artists/').push().key;
       var updates = {};
