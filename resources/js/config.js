@@ -1,5 +1,5 @@
 export var config = {
-  apiKey: process.env.FIREBASE_PROJECTX_KEY,
+  apiKey: "AIzaSyDQ3esJS1lNdAEaSqO8-b0QjkzGD1hs3Jc",
   authDomain: "bush-house-sessions.firebaseapp.com",
   databaseURL: "https://bush-house-sessions.firebaseio.com",
   projectId: "bush-house-sessions",
