@@ -26,7 +26,7 @@ function loadArtists(){
   ref.orderByChild("name").on("child_added", function(snapshot) {
     artistNames.push(snapshot.val().name);
     let data = snapshot.val();
-    let artistName = snapshot.val().name;
+    const artistName = snapshot.val().name;
     let type = snapshot.val().type;
     let li = document.createElement('li');
     li.classList.add('artist')
@@ -146,8 +146,6 @@ function prepareToUpdate(){
         reject(error);
       }
       else{
-        console.log("about to write data WITHIN promise")
-        console.log(data)
         updateArtist(data)
       }
     });
